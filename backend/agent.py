@@ -7,12 +7,9 @@ from pydantic_ai.models.openai import OpenAIModel
 # OPENAI_BASE_URL
 
 model = OpenAIModel(
-    model_name="gpt-4o-mini",
-    # api_key parameter removed - it uses OPENAI_API_KEY env var automatically
-    default_headers={
-        "HTTP-Referer": "https://career-ai-agent-zojx.onrender.com",
-        "X-Title": "Career AI Agent"
-    }
+    model_name="gpt-4o-mini"
+    # Removed: api_key parameter
+    # Removed: default_headers parameter
 )
 
 agent = Agent(
@@ -22,7 +19,6 @@ agent = Agent(
         "Generate a structured, practical career roadmap."
     )
 )
-
 
 
 
