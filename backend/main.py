@@ -1,28 +1,15 @@
-from dotenv import load_dotenv
-load_dotenv()
-
 from fastapi import FastAPI
-from fastapi.middleware.cors import CORSMiddleware
 from models import StudentProfile
 from agent import agent
 
 app = FastAPI()
 
-# ✅ ADD THIS
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["http://localhost:3000"],
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
-
 @app.post("/generate-roadmap")
 async def generate_roadmap(profile: StudentProfile):
-    result = await agent.run(profile.model_dump())
-    return {
-        "roadmap": result.data
-    }
+    result = await agent.run(profile)
+    return result.data
+
+
 
 
 

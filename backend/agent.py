@@ -1,13 +1,15 @@
 from pydantic_ai import Agent
+from models import RoadmapResponse
 
 agent = Agent(
-    model="gpt-3.5-turbo",
+    model=model,
+    result_type=RoadmapResponse,
     system_prompt="""
-    You are a professional career guidance counselor.
-    Give realistic, practical, student-friendly advice.
-    Always respond in structured format.
+    You are a career guidance AI.
+    Given a student's background, return a structured roadmap.
     """
 )
+
 
 
 
