@@ -7,7 +7,7 @@ class StudentProfile(BaseModel):
     career_goal: str
     hours_per_week: int
 
-class CareerRoadmap(BaseModel):
+class RoadmapResponse(BaseModel):
     career_options: List[str]
     required_skills: List[str]
     weekly_plan: Dict[str, List[str]]
