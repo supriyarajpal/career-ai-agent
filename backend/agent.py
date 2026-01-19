@@ -1,17 +1,15 @@
 from pydantic_ai import Agent
 from pydantic_ai.models.openai import OpenAIModel
-from models import CareerRoadmap
 
-# ✅ CORRECT constructor for v1.44
+# ✅ model defined correctly
 model = OpenAIModel("gpt-4o-mini")
 
+# ✅ Agent has NO result_type
 agent = Agent(
     model,
-    result_type=CareerRoadmap,
     system_prompt=(
         "You are a career guidance AI. "
-        "Given a student's profile, generate a structured career roadmap "
-        "with skills, weekly plan, and next steps."
+        "Given a student's profile, generate a structured career roadmap."
     )
 )
 
