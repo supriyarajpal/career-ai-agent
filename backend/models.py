@@ -13,7 +13,4 @@ class CareerRoadmap(BaseModel):
     weekly_plan: Dict[str, List[str]]
     next_7_days: List[str]
 
-# ✅ ADD THIS
-class RoadmapResponse(BaseModel):
-    roadmap: CareerRoadmap
 
