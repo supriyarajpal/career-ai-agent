@@ -1,16 +1,13 @@
 from pydantic_ai import Agent
 from pydantic_ai.models.openai import OpenAIModel
 
-# OpenRouter auth is read automatically from:
+# pydantic-ai reads everything from environment variables:
 # OPENAI_API_KEY
 # OPENAI_BASE_URL
+# OPENAI_DEFAULT_HEADERS
 
 model = OpenAIModel(
-    model_name="openrouter/openai/gpt-4o-mini",
-    default_headers={
-        "HTTP-Referer": "https://career-ai-agent-zojx.onrender.com",
-        "X-Title": "Career AI Agent"
-    }
+    model_name="openrouter/openai/gpt-4o-mini"
 )
 
 agent = Agent(
@@ -20,3 +17,4 @@ agent = Agent(
         "Generate a structured, practical career roadmap."
     )
 )
+
