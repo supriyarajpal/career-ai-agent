@@ -2,9 +2,8 @@ from pydantic_ai import Agent
 from pydantic_ai.models.openai import OpenAIModel
 
 model = OpenAIModel(
-    model_name="openai/gpt-3.5-turbo"
+    model_name="openai/gpt-4o-mini"
 )
-
 
 agent = Agent(
     model=model,
@@ -13,6 +12,7 @@ agent = Agent(
         "Generate a structured, practical career roadmap."
     )
 )
+
 
 
 
