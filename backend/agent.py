@@ -1,11 +1,8 @@
 from pydantic_ai import Agent
 from pydantic_ai.models.openai import OpenAIModel
 
-# pydantic-ai reads auth ONLY from environment variables
-# DO NOT pass api_key, base_url, headers here
-
 model = OpenAIModel(
-    model_name="gpt-4o-mini"
+    model_name="openai/gpt-4o-mini"
 )
 
 agent = Agent(
@@ -15,6 +12,7 @@ agent = Agent(
         "Generate a structured, practical career roadmap."
     )
 )
+
 
 
 
