@@ -14,3 +14,4 @@ class RoadmapResponse(BaseModel):
     next_7_days: List[str]
 
 
+
