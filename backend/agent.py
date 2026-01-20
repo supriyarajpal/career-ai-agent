@@ -1,13 +1,11 @@
 from pydantic_ai import Agent
 from pydantic_ai.models.openai import OpenAIModel
 
-# DO NOT pass api_key
-# DO NOT pass base_url
-# DO NOT pass headers
-# pydantic-ai reads env vars automatically
+# DO NOT pass api_key, base_url, headers
+# pydantic-ai reads them automatically from env
 
 model = OpenAIModel(
-    model_name="gpt-4o-mini"
+    model_name="openai/gpt-4o-mini"
 )
 
 agent = Agent(
